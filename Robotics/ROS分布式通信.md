@@ -32,11 +32,17 @@
 可以ping一下看看是否连通(在主机)：```$ ping hostnameB```
 
 ### 3. 修改.bashrc文件
-在主机和从机中均需添加如下命令：
+在主机中添加如下命令：
 ```
 export ROS_HOSTNAME=hostname_A
 export ROS_MASTER_URI=http://hostname_A:11311
 ```
+在从机中添加如下命令：
+```
+export ROS_HOSTNAME=hostname_B
+export ROS_MASTER_URI=http://hostname_A:11311
+```
+
 
 ### 测试
 主机A:
